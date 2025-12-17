@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { View, Animated, Image } from "react-native";
+import { navigate, resetAndNavigate } from "../../utils/NavigationUtils";
 
 export default function SplashScreen({ navigation }: any) {
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -24,7 +25,8 @@ export default function SplashScreen({ navigation }: any) {
 
     const timeout = setTimeout(() => {
       loopAnimation.stop();
-      navigation.replace("Home");
+      // navigation.replace("Home");
+      resetAndNavigate("Home");
     }, 5000);
 
     return () => {

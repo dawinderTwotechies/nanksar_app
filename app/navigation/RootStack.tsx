@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen, SplashScreen } from '../screens';
 import { ScreenHeaders } from '../componets';
+import MainHeader from '../componets/headers/MainHeader';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +13,7 @@ export default function RootStack() {
                 name="Home"
                 component={HomeScreen}
                 options={() => ({
-                    header: () => <ScreenHeaders/>
+                    header: () => <MainHeader/>
                 })}
             />
 
