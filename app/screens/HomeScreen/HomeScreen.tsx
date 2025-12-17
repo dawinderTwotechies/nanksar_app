@@ -1,0 +1,40 @@
+import { ScrollView, View } from 'react-native';
+import { CircleCard } from '../../componets';
+import SquareCard from '../../componets/elements/Card/SquareCard';
+import AppText from '../../componets/elements/AppText/AppText';
+import { BELL, CAMERA, Khanda } from '../../assets/svgs';
+
+export default function HomeScreen() {
+    return (
+        <>
+
+            <View className='flex-wrap flex-row gap-14 justify-center mt-6'>
+                <CircleCard title="Circle Card" Icon={<Khanda width={90} height={90} />} size={130} />
+                <CircleCard title="Circle Card" Icon={<Khanda width={90} height={90} />} size={130} />
+                <CircleCard title="Circle Card" Icon={<Khanda width={90} height={90} />} size={130} />
+                <CircleCard title="Circle Card" Icon={<Khanda width={90} height={90} />} size={130} />
+            </View>
+            <View className='mt-16'>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{ paddingHorizontal: 16, gap: 16, }} >
+                    <SquareCard title="Gallery" icon={<CAMERA width={90} height={90} />} />
+                    <SquareCard title="Gallery" icon={<Khanda width={90} height={90} />} />
+                    <SquareCard title="Gallery" icon={<Khanda width={90} height={90} />} />
+                    <SquareCard title="Gallery" icon={<Khanda width={90} height={90} />} />
+                    <SquareCard title="Gallery" icon={<Khanda width={90} height={90} />} />
+                    <SquareCard title="Gallery" icon={<Khanda width={90} height={90} />} />
+                    <SquareCard title="Gallery" icon={<Khanda width={90} height={90} />} />
+                </ScrollView>
+            </View>
+            {/* bottom var  */}
+            <View className='flex-row justify-between items-center absolute bottom-10 px-5 w-full'>
+                <CircleCard Icon={<Khanda width={20} height={20} />} size={50} />
+                <View className='flex-col justify-center items-center'>
+                    <AppText size={14}> ਸੰਤ ਬਾਬਾ ਭਗਤ ਸਿੰਘ ਜੀ</AppText>
+                    <AppText size={12}>(ਨਾਨਕਸਰ ਕਲੇਰਾਂ)</AppText>
+                </View>
+                <CircleCard Icon={<BELL width={50} height={50} />} size={50} />
+            </View>
+        </>
+    );
+}
