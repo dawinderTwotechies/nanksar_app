@@ -8,7 +8,8 @@ type ThemeName =
   | "primary"
   | "secondary"
   | "tertiary"
-  | "quaternary";
+  | "quaternary"
+  | "dark";
 
 type AppContextType = {
   // text

@@ -11,14 +11,12 @@ function App() {
 
   return (
     <>
-      <ThemeContextProvider>
-        <SafeAreaView className='bg-red-200' style={{ flex: 1 }}>
-            <AppContextProvider>
+      <AppContextProvider>
+        <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? '#000000' : '#FFFFFF' }}>
               <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
               <AppNavigator />
-            </AppContextProvider>
         </SafeAreaView>
-      </ThemeContextProvider>
+      </AppContextProvider>
 
     </>
   );

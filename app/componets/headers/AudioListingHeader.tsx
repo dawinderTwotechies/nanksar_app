@@ -1,10 +1,13 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { GestureResponderEvent, StyleSheet, View } from 'react-native'
 import GoBack from '../smartComponents/GoBack'
 import { useAppContext } from '../../context/AppContext';
 import { withOpacity } from '../../utils/helper';
 import { SETTINGS } from '../../assets/svgs';
 import SmartSearch from '../smartComponents/SmartSearch';
+import PaathList from '../lists/PaathList';
+import { SIZES } from '../../utils/theme';
+import { navigate } from '../../utils/NavigationUtils';
 
 
 const AudioListingHeader = () => {
@@ -12,7 +15,7 @@ const AudioListingHeader = () => {
 //   setTheme('primary');
   return (
     <>
-        <View style={[{backgroundColor:withOpacity(colors.primary,0.08)},styles.mainHeaderContainer]} className={`w-full flex flex-row items-center justify-between px-[20px] py-[10px]`}>
+        <View style={[{backgroundColor:colors.secondary},styles.mainHeaderContainer]} className={`w-full flex flex-row items-center justify-between py-[10px]`}>
             <View>
                 <GoBack />
             </View>
@@ -29,7 +32,7 @@ const AudioListingHeader = () => {
 
 const styles = StyleSheet.create({
     mainHeaderContainer:{
-
+      paddingHorizontal: SIZES.screenDefaultPadding,
     }
 })
 export default AudioListingHeader

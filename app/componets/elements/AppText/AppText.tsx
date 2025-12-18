@@ -1,10 +1,10 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { StyleProp, Text, TextProps, TextStyle } from 'react-native'
 import { useAppContext } from '../../../context/AppContext';
 
-interface Props {
+interface Props extends TextProps {
     children: React.ReactNode;
-    style?: any;
+    style?: StyleProp<TextStyle>;
     size?: number;
 }
 
@@ -20,9 +20,11 @@ export default function AppText({
         <Text
             {...props}
             style={[
-                { fontSize: size * textScale, color: isDarkMode ? 'white' : 'black' },
+                { color: isDarkMode ? 'white' : 'black' },
                 style,
+                { fontSize: size * textScale },
             ]}
+            
         >
             {children}
         </Text>

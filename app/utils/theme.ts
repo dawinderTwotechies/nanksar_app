@@ -4,34 +4,70 @@ const { height, width } = Dimensions.get('window');
 
 const COLORS = {
   default: {
-    primary: "#021E42",
-    secondary: "#fbfcfe",
+    primary: "#003D5D",
+    secondary: "#E3F5FF",
     black: "#000000",
     white: "#FFFFFF",
+    plpTextColor: "#000000", // paath list punjabi text color
+    plhTextColor: "#003D5D", // paath list hindi text color
+    pleTextColor: "#003D5D", // paath list english text color
+    plpiTextColor: "#2990CB", // paath list page info text color 
+    screenBg: "#FFFFFF",
   },
   primary: {
     primary: "#EC691F",
     secondary: "#fbfcfe",
     black: "#000000",
     white: "#FFFFFF",
+    plpTextColor: "#000000", // paath list punjabi text color
+    plhTextColor: "#003D5D", // paath list hindi text color
+    pleTextColor: "#003D5D", // paath list english text color
+    plpiTextColor: "#2990CB", // paath list page info text color 
+    screenBg: "#FFFFFF",
   },
   secondary: {
     primary: "#9C043A",
     secondary: "#fbfcfe",
     black: "#000000",
     white: "#FFFFFF",
+    plpTextColor: "#000000", // paath list punjabi text color
+    plhTextColor: "#003D5D", // paath list hindi text color
+    pleTextColor: "#003D5D", // paath list english text color
+    plpiTextColor: "#2990CB", // paath list page info text color 
+    screenBg: "#FFFFFF",
   },
   tertiary: {
     primary: "#9C043A",
     secondary: "#fbfcfe",
     black: "#000000",
     white: "#FFFFFF",
+    plpTextColor: "#000000", // paath list punjabi text color
+    plhTextColor: "#003D5D", // paath list hindi text color
+    pleTextColor: "#003D5D", // paath list english text color
+    plpiTextColor: "#2990CB", // paath list page info text color 
+    screenBg: "#FFFFFF",
   },
   quaternary: {
     primary: "#9C043A",
     secondary: "#fbfcfe",
     black: "#000000",
     white: "#FFFFFF",
+    plpTextColor: "#000000", // paath list punjabi text color
+    plhTextColor: "#003D5D", // paath list hindi text color
+    pleTextColor: "#003D5D", // paath list english text color
+    plpiTextColor: "#2990CB", // paath list page info text color 
+    screenBg: "#FFFFFF",
+  },
+  dark: {
+    primary: "#9C043A",
+    secondary: "#fbfcfe",
+    black: "#000000",
+    white: "#FFFFFF",
+    plpTextColor: "#000000", // paath list punjabi text color
+    plhTextColor: "#003D5D", // paath list hindi text color
+    pleTextColor: "#003D5D", // paath list english text color
+    plpiTextColor: "#2990CB", // paath list page info text color 
+    screenBg: "#000000",
   },
 };
 
@@ -43,6 +79,7 @@ const SIZES = {
   large: 20,
   xLarge: 24,
   xxLarge: 44,
+  screenDefaultPadding: 16,
   height,
   width,
   widthPer: (percent = 100) => width * (percent / 100),
