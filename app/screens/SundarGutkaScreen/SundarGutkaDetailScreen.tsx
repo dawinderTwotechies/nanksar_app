@@ -6,9 +6,7 @@ import InnerSundarGutkaDetail from '../../componets/blocks/InnerSundarGutka/Inne
 const SundarGutkaDetailScreen = () => {
   return (
     <>
-      <GradientBg>
-          <InnerSundarGutkaDetail />
-      </GradientBg>
+      <InnerSundarGutkaDetail />
     </>
   )
 }

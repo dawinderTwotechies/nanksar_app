@@ -12,6 +12,7 @@ interface GradientBgProps {
   style?: StyleProp<ViewStyle>; // Optional additional styles
   children?: React.ReactNode; // Support for children
   locations?: number[];
+  safeArea?: boolean;
 }
 
 const GradientBg: React.FC<GradientBgProps> = ({
@@ -20,6 +21,7 @@ const GradientBg: React.FC<GradientBgProps> = ({
   style,
   children,
   locations= [0, 1],
+  safeArea = true,
 }) => {
   const { colors } = useAppContext();
   if (!colorsList) {
@@ -34,9 +36,8 @@ const GradientBg: React.FC<GradientBgProps> = ({
       locations={locations}
       style={[{ flex: 1 }, style]}
     >
-      <SafeAreaView style={{ flex: 1 }}>
-      {children}
-      </SafeAreaView>
+      {/* {safeArea ? null : children} */}
+      {safeArea ? <SafeAreaView style={{ flex: 1 }}>{children}</SafeAreaView> : children}
     </LinearGradient>
   );
 };

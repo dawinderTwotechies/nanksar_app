@@ -28,7 +28,7 @@ export default function SplashScreen({ navigation }: any) {
       loopAnimation.stop();
       // navigation.replace("Home");
       resetAndNavigate("Home");
-    }, 5000);
+    }, 500);
 
     return () => {
       clearTimeout(timeout);
