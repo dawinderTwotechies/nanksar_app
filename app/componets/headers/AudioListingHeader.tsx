@@ -12,6 +12,10 @@ import { navigate } from '../../utils/NavigationUtils';
 
 const AudioListingHeader = () => {
   const { textScale, colors, setTheme } = useAppContext();
+
+  const handleSearhTextChange = (text: string) => {
+    console.log("Search text changed in Header: ", text);
+  };
 //   setTheme('primary');
   return (
     <>
@@ -21,7 +25,7 @@ const AudioListingHeader = () => {
             </View>
             <View className="flex flex-row items-center justify-center gap-[3px]">
                 <View>
-                    <SmartSearch searhIconWidth={30} searchIconHeight={30} />
+                    <SmartSearch onChangeText={handleSearhTextChange} searhIconWidth={30} searchIconHeight={30} />
                 </View>
                 <SETTINGS color={colors.primary} height={30} width={30} />
             </View>

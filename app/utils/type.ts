@@ -19,12 +19,22 @@ export interface PaathlistItem {
   pageInfoStyle?: StyleProp<TextStyle>;
   onPress?: (event: GestureResponderEvent) => void;
 }
-export interface PaathCardItem {
-  punjabiText: string;
-  hindiText?: string;
-  englishText?: string;
-  containerStyle?: StyleProp<ViewStyle>;
-  punjabiTextStyle?: StyleProp<TextStyle>;
-  hindiTextStyle?: StyleProp<TextStyle>;
-  englishTextStyle?: StyleProp<TextStyle>;
+export type Explanation = {
+  text: string;
+  lang: string;
+};
+
+export interface PaathCardData {
+  title: string;
+  engVersion?: string;
+  explanations?: Explanation[];
 }
+
+export interface PaathCardItem {
+  data: PaathCardData;
+  containerStyle?: StyleProp<ViewStyle>;
+  titleStyle?: StyleProp<TextStyle>;
+  engVersionStyle?: StyleProp<TextStyle>;
+  handleReadMorePress?: (textObj: Explanation) => void;
+}
+
